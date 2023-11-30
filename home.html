@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home: Column control demo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://www.abbviepro.com/etc.clientlibs/abbvie-pro/clientlibs/publish-header.min.css" />
+    <style>
+        /* segment component start */
+        .segment {
+          width: 100%;
+        }
+
+        .segment_container {
+          width: 100%;
+          padding: 0 15px;
+        }
+
+        .segment_container:not(.p-0) .container {
+          padding: 0;
+        }
+
+        .segment_container--center {
+          max-width: 1320px;
+          margin: 0 auto;
+        }
+
+        @media (min-width: 576px) {
+          .segment_container--center {
+            max-width: 540px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .segment_container--center {
+            max-width: 720px;
+          }
+        }
+
+        @media (min-width: 992px) {
+          .segment_container--center {
+            max-width: 960px;
+          }
+        }
+
+        @media (min-width: 1200px) {
+          .segment_container--center {
+            max-width: 1140px;
+          }
+        }
+
+        /* segment component start */
+    </style>
+</head>
+
+<!-- 
+  <div class="segment"> // AEM decoration
+    <div class="segment_wrapper">
+      <div class="segment_container segment_container--center p-0">
+        .... .. content .... ... 
+      </div>
+    </div>
+  </div> 
+  -->
+
+<body data-site-id="dmpro-400">
+    
+    <header class="bg-primary">
+        <h1 class="text-center m-0 py-2 text-white">Header</h1>
+    </header>
+
+    <br><a href="index.html" class="btn btn-secondary">Back</a> <br>
+
+    <div class="separator">
+        <hr class="cmp-separator__horizontal-rule border-0 size-1 my-5" />
+    </div>
+
+    <div class="segment">
+        <div class="segment_wrapper">
+            <div class="segment_container segment_container--center">
+                <div class="cmp-teaser section aem-GridColumn aem-GridColumn--default--12">
+                    <div class="teaser__inner dmpro-v2 card row--style flex-md-row ">
+                        <div class="teaser__image">
+                            <div class="image-extension section ">
+                                <div class="image-container justify-content-center">
+                                    <a target="_self" alt="Person sorting products" class="w-100" data-overlay="false">
+                                        <div class="d-block device-image-container" data-img-width="1080"
+                                            data-img-height="721">
+                                            <img class="img-fluid d-block  no-bgap ls-is-cached lazyloaded"
+                                                src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_87485/par1-100col/teaser_copy/bg-image/item_1.coreimg.jpg/1647348869452-welcome-teaser-our-product-1080x721px.jpg">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teaser__content">
+                            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                    <div class="headline-text-component" data-v-app="">
+                                        <div>
+                                            <div class="cmp-text dmpro-v2">
+                                                <h3>Produkte</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                    <div class="headline-text-component" data-v-app="">
+                                        <div>
+                                            <div class="cmp-text dmpro-v2">
+                                                <p>Sehen Sie sich unser gesamtes Produktportfolio an.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-link aem-GridColumn aem-GridColumn--default--12">
+                                    <a class="dmpro-v2 btn btn-primary btn-with-icon  text-white   "
+                                        href="https://www.abbviepro.com/de/de/produkte.html"
+                                        onclick="pushToDatalayer('disable', '', '', '', '')" target="_self"
+                                        title="Erfahren Sie mehr über unsere Produkte" role="button" style=";;"
+                                        data-type="internalLink" data-overlay="false">
+                                        Erfahren Sie mehr über unsere Produkte
+                                        <span class="btn--icon"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="segment">
+        <div class="segment_wrapper">
+            <div class="segment_container segment_container--center p-0">
+
+                <div class="column-control">
+                    <div class="column-control-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="cmp-teaser section aem-GridColumn aem-GridColumn--default--12 h-100">
+                                        <div class="teaser__inner dmpro-v2 card " style=";">
+                                            <div class="teaser__image">
+                                                <div class="image-extension section ">
+                                                    <div class="image-container justify-content-center">
+                                                        <a target="_self" alt="Spritzen und Werkzeug" class="w-100"
+                                                            data-overlay="false">
+                                                            <div class="d-block device-image-container"
+                                                                data-img-width="1012" data-img-height="675">
+                                                                <img class="img-fluid d-block  no-bgap ls-is-cached lazyloaded"
+                                                                    src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_87485/par1-100col/column_control/par1-5050col/teaser/bg-image/item_1.coreimg.jpg/1647352021387-welcome-teaser-therapiegebiete-1012x675px.jpg/1647352021387-welcome-teaser-therapiegebiete-1012x675px.jpg"
+                                                                    alt="Spritzen und Werkzeug"
+                                                                    title="Spritzen und Werkzeug" fetchpriority="low"
+                                                                    data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_87485/par1-100col/column_control/par1-5050col/teaser/bg-image/item_1.coreimg.jpg/1647352021387-welcome-teaser-therapiegebiete-1012x675px.jpg/1647352021387-welcome-teaser-therapiegebiete-1012x675px.jpg">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teaser__content">
+                                                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <h3>Erfahren Sie mehr über unsere Therapiegebiete
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <p>Sehen Sie sich die neuesten Informationen und
+                                                                        Forschungsergebnisse zu spezifischen
+                                                                        Krankheitsbildern an.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-link aem-GridColumn aem-GridColumn--default--12">
+                                                        <a class="dmpro-v2 btn btn-primary btn-with-icon  text-secondary-color   "
+                                                            href="https://www.abbviepro.com/de/de/therapiegebiete.html"
+                                                            onclick="pushToDatalayer('disable', '', '', '', '')"
+                                                            target="_self" title="Zu den Therapiegebieten" role="button"
+                                                            style=";;" data-type="internalLink" data-overlay="false">
+                                                            Zu den Therapiegebieten
+                                                            <span class="btn--icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="cmp-teaser section aem-GridColumn aem-GridColumn--default--12 h-100">
+                                        <div class="teaser__inner dmpro-v2 card " style=";">
+                                            <div class="teaser__image">
+                                                <div class="image-extension section ">
+                                                    <div class="image-container justify-content-center">
+                                                        <a target="_self" alt="Kontakt Teaser" class="w-100"
+                                                            data-overlay="false">
+                                                            <div class="d-block device-image-container"
+                                                                data-img-width="1080" data-img-height="720">
+                                                                <img class="img-fluid d-block  no-bgap ls-is-cached lazyloaded"
+                                                                    src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_87485/par1-100col/column_control/par2-5050col/teaser_copy_copy/bg-image/item_1.coreimg.jpg/1647515148095-welcome-teaser-contact-1080x720px.jpg/1647515148095-welcome-teaser-contact-1080x720px.jpg"
+                                                                    alt="Kontakt Teaser" title="Kontakt Teaser"
+                                                                    fetchpriority="low"
+                                                                    data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_87485/par1-100col/column_control/par2-5050col/teaser_copy_copy/bg-image/item_1.coreimg.jpg/1647515148095-welcome-teaser-contact-1080x720px.jpg/1647515148095-welcome-teaser-contact-1080x720px.jpg">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teaser__content">
+                                                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <h3>Treten Sie mit uns in Kontakt<br> &nbsp;</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <p>Wenn Sie wissen möchten, wie AbbVie Ihnen und
+                                                                        Ihren Patient*innen helfen kann oder Sie einfach
+                                                                        eine medizinische Anfrage haben, wenden Sie sich
+                                                                        gerne an uns.<br></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-link aem-GridColumn aem-GridColumn--default--12">
+                                                        <a class="dmpro-v2 btn btn-primary btn-with-icon  text-primary-color   "
+                                                            href="https://www.abbviepro.com/de/de/kontakt-und-service.html"
+                                                            onclick="pushToDatalayer('disable', '', '', '', '')"
+                                                            target="_self" title="Kontaktieren Sie uns" role="button"
+                                                            style=";;" data-type="internalLink" data-overlay="false">
+                                                            Kontaktieren Sie uns
+                                                            <span class="btn--icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="segment">
+        <div class="segment_wrapper" style="background: #061d49">
+            <div class="segment_container segment_container--center p-0">
+
+                <div class="column-control">
+                    <div class="column-control-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="headline-text-component" data-v-app="">
+                                            <div class="text-white">
+                                                <div class="cmp-text dmpro-v2">
+                                                    <br />
+                                                    <br />
+                                                    <h2>
+                                                        <b><br />
+                                                            Registrieren Sie sich für personalisierte Inhalte, Events,
+                                                            Schulungen und weitere&nbsp; Angebote</b>
+                                                    </h2>
+                                                    <p>
+                                                        Registrieren Sie sich, um Zugang zu unserem umfangreichen
+                                                        Angebot an Produktinformationen, Schulungs- und
+                                                        für&nbsp;Patient*innen geeignete Materialien, akkreditierten
+                                                        Fortbildungen und dem vollständigen Eventkalender zu erhalten.
+                                                        Wir unterstützen Sie dabei, dass Ihre Patient*innen die
+                                                        bestmöglichen Ergebnisse erzielen können.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="separator">
+                    <hr class="cmp-separator__horizontal-rule border-0 size-1 my-3" />
+                </div>
+
+                <div class="column-control">
+                    <div class="column-control-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="separator">
+                                        <hr class="cmp-separator__horizontal-rule border-0 size-1 my-2" />
+                                    </div>
+                                    <div class="image-extension section aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="image-container justify-content-start">
+                                            <a target="_self" alt="Produktinformation Teaser" data-overlay="false">
+                                                <div class="d-block device-image-container">
+                                                    <img class="img-fluid d-block lazyloaded"
+                                                        alt="Produktinformation Teaser"
+                                                        title="Produktinformation Teaser" fetchpriority="low"
+                                                        data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr%3acontent/body/container_copy/content/column_control/par1-100col/column_control/par1-100col/column_control/par1-25252525col/image_extension/item_1.coreimg.svg/1658908025324.svg/1658907945229-hand-with-love.svg"
+                                                        src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr%3acontent/body/container_copy/content/column_control/par1-100col/column_control/par1-100col/column_control/par1-25252525col/image_extension/item_1.coreimg.svg/1658908025324.svg/1658907945229-hand-with-love.svg" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="headline-text-component" data-v-app="">
+                                            <div class="text-white">
+                                                <div class="cmp-text dmpro-v2">
+                                                    <h4> Produktinformationen und Patientenangebote
+                                                    </h4>
+                                                    <p> Alles, was Sie brauchen, um unsere Produkte und deren Wirkung
+                                                        bestmöglich zu verstehen, wie z. B. ausführliche
+                                                        Produktinformationen, fachlich fundierte Ratschläge und
+                                                        für&nbsp;Patient*innen geeignete Materialien.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="separator">
+                                        <hr class="cmp-separator__horizontal-rule border-0 size-1 my-2" />
+                                    </div>
+                                    <div class="image-extension section aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="image-container justify-content-start">
+                                            <a target="_self" alt="Therapiegebiete Teaser" data-overlay="false">
+                                                <div class="d-block device-image-container">
+                                                    <img class="img-fluid d-block lazyloaded"
+                                                        alt="Therapiegebiete Teaser" title="Therapiegebiete Teaser"
+                                                        fetchpriority="low"
+                                                        data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/container_copy/content/column_control/par1-100col/column_control/par1-100col/column_control/par2-25252525col/bg_image_copy/item_1.coreimg.svg/1658907945449-people.svg"
+                                                        src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/container_copy/content/column_control/par1-100col/column_control/par1-100col/column_control/par2-25252525col/bg_image_copy/item_1.coreimg.svg/1658907945449-people.svg" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="headline-text-component" data-v-app="">
+                                            <div class="text-white">
+                                                <div class="cmp-text dmpro-v2">
+                                                    <h4>Therapiegebiete</h4>
+                                                    <p>
+                                                        Unser komplettes Angebot an aktuellen Erkenntnissen aus der
+                                                        Forschung, Kongressinhalten, Fachartikeln, Schulungsmaterialien,
+                                                        Experteninterviews und vielem mehr.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="separator">
+                                        <hr class="cmp-separator__horizontal-rule border-0 size-1 my-2" />
+                                    </div>
+                                    <div class="image-extension section aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="image-container justify-content-start">
+                                            <a target="_self" alt="Events Teaser" data-overlay="false">
+                                                <div class="d-block device-image-container">
+                                                    <img class="img-fluid d-block lazyloaded" alt="Events Teaser"
+                                                        title="Events Teaser" fetchpriority="low"
+                                                        data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/container_copy/content/column_control/par1-100col/column_control/par1-100col/column_control/par3-25252525col/bg_image_copy/item_1.coreimg.svg/1658907824256-certify.svg"
+                                                        src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/container_copy/content/column_control/par1-100col/column_control/par1-100col/column_control/par3-25252525col/bg_image_copy/item_1.coreimg.svg/1658907824256-certify.svg" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="headline-text-component" data-v-app="">
+                                            <div class="text-white">
+                                                <div class="cmp-text dmpro-v2">
+                                                    <h4>
+                                                        Events und Fortbildungen </h4>
+                                                    <p> Bleiben Sie informiert und erfahren Sie alles über zukünftige
+                                                        Events, darunter Webinare zu den neuesten Erkenntnissen der
+                                                        Wissenschaft, Austausche mit Experten und CME-Schulungen.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="image-extension section aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="image-container justify-content-start">
+                                            <a target="_self" alt="Kontakt Teaser" data-overlay="false">
+                                                <div class="d-block device-image-container">
+                                                    <img class="img-fluid d-block lazyloaded" alt="Kontakt Teaser"
+                                                        title="Kontakt Teaser" fetchpriority="low"
+                                                        data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/container_copy/content/column_control/par1-100col/column_control/par1-100col/column_control/par4-25252525col/bg_image_copy/item_1.coreimg.svg/1658907945384-message.svg"
+                                                        src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/container_copy/content/column_control/par1-100col/column_control/par1-100col/column_control/par4-25252525col/bg_image_copy/item_1.coreimg.svg/1658907945384-message.svg" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="headline-text-component" data-v-app="">
+                                            <div class="text-white">
+                                                <div class="cmp-text dmpro-v2">
+                                                    <h4>
+                                                        Kontakt und Services </h4>
+                                                    <p> Sie möchten auf dem Laufenden bleiben und Antworten auf
+                                                        medizinische oder produktbezogene Fragen erhalten? Dann melden
+                                                        Sie sich für unseren AbbVie Pro-Newsletter an, der auf Ihre
+                                                        Interessen zugeschnitten ist.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                    <div class="headline-text-component" data-v-app="">
+                        <div class="text-white">
+                            <div class="cmp-text dmpro-v2">
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column-control">
+                    <div class="column-control-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                        <div class="button-link aem-GridColumn aem-GridColumn--default--12">
+                                            <a class="dmpro-v2 btn btn-primary btn-with-icon btn--white text-secondary-color   "
+                                                href="https://www.abbviepro.com/de/de.registration.html.registration.html"
+                                                onclick="pushToDatalayer('disable', '', '', '', '')" target="_blank"
+                                                title="Jetzt registrieren" role="button" style=";;"
+                                                data-type="internalLink" data-overlay="false">
+                                                Jetzt registrieren
+                                                <span class="btn--icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                        <div class="headline-text-component" data-v-app="">
+                                            <div class="text-white">
+                                                <div class="cmp-text dmpro-v2">
+                                                    <p>Bereits registriert? <a href="https://id.abbvie.com/Login"
+                                                            target="_blank"><b>Anmelden</b></a><br></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                    <div class="headline-text-component" data-v-app="">
+                        <div class="text-white">
+                            <div class="cmp-text dmpro-v2">
+                                <br />
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="separator">
+        <hr class="cmp-separator__horizontal-rule border-0 size-1 my-5" />
+    </div>
+
+
+    <div class="segment">
+        <div class="segment_wrapper">
+            <div class="segment_container segment_container--center p-0">
+                <div class="column-control">
+                    <div class="column-control-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="cmp-teaser section aem-GridColumn aem-GridColumn--default--12 h-100">
+                                        <div class="teaser__inner dmpro-v2 card " style=";">
+                                            <div class="teaser__image">
+                                                <div class="image-extension section ">
+                                                    <div class="image-container justify-content-center">
+                                                        <a target="_self" alt="Newsletter Teaser" class="w-100"
+                                                            data-overlay="false">
+                                                            <div class="d-block device-image-container"
+                                                                data-img-width="1080" data-img-height="720">
+                                                                <img class="img-fluid d-block  no-bgap lazyloaded"
+                                                                    src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_12163/par1-333333col/teaser_copy_45716030/bg-image/item_1.coreimg.jpg/1647515046680-newsletter-finger-mit-email-teaser-1080x720px.jpg/1647515046680-newsletter-finger-mit-email-teaser-1080x720px.jpg"
+                                                                    alt="Newsletter Teaser" title="Newsletter Teaser"
+                                                                    fetchpriority="low"
+                                                                    data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_12163/par1-333333col/teaser_copy_45716030/bg-image/item_1.coreimg.jpg/1647515046680-newsletter-finger-mit-email-teaser-1080x720px.jpg/1647515046680-newsletter-finger-mit-email-teaser-1080x720px.jpg">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teaser__content">
+                                                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <h3>Bleiben Sie auf dem Laufenden&nbsp; &nbsp;
+                                                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                                                        &nbsp;&nbsp;
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <p>Melden Sie sich an, um unseren AbbVie
+                                                                        Pro-Newsletter zu erhalten, der auf Ihre
+                                                                        Interessen zugeschnitten ist.<br>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-link aem-GridColumn aem-GridColumn--default--12">
+                                                        <a class="dmpro-v2 btn btn-primary btn-with-icon  text-secondary-color btn--locked  "
+                                                            href="https://www.abbviepro.com/de/de/kontakt-und-service/email-service-fachkreise.html"
+                                                            onclick="pushToDatalayer('disable', '', '', '', '')"
+                                                            target="_self" title="Jetzt registrieren  / anmelden"
+                                                            role="button" style=";;" data-type="internalLink"
+                                                            data-overlay="false">
+                                                            <span class="btn--locked--icon"></span>
+                                                            Jetzt registrieren / anmelden
+                                                            <span class="btn--icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="cmp-teaser section aem-GridColumn aem-GridColumn--default--12 h-100">
+                                        <div class="teaser__inner dmpro-v2 card " style=";">
+                                            <div class="teaser__image">
+                                                <div class="image-extension section ">
+                                                    <div class="image-container justify-content-center">
+                                                        <a target="_self" alt="Medizinisch-wissenschaftliche Anfrage"
+                                                            class="w-100" data-overlay="false">
+                                                            <div class="d-block device-image-container"
+                                                                data-img-width="486" data-img-height="220">
+                                                                <img class="img-fluid d-block  no-bgap ls-is-cached lazyloaded"
+                                                                    src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_12163/par2-333333col/teaser_copy/bg-image/item_1.coreimg.jpg/1647420442141-mv-anfrage-doctor-im-labor-teaser-486x220px.jpg/1647420442141-mv-anfrage-doctor-im-labor-teaser-486x220px.jpg"
+                                                                    alt="Medizinisch-wissenschaftliche Anfrage"
+                                                                    title="Medizinisch-wissenschaftliche Anfrage"
+                                                                    fetchpriority="low"
+                                                                    data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_12163/par2-333333col/teaser_copy/bg-image/item_1.coreimg.jpg/1647420442141-mv-anfrage-doctor-im-labor-teaser-486x220px.jpg/1647420442141-mv-anfrage-doctor-im-labor-teaser-486x220px.jpg">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teaser__content">
+                                                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <h3>Medizinisch-wissenschaftliche Anfragen</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <p>Das AbbVie Medical Information-Team beantwortet
+                                                                        Ihnen alle Fragen zu medizinischen Themen,
+                                                                        beispielsweise über unsere Produkte und
+                                                                        verwandten Therapiegebiete.
+                                                                    </p>
+                                                                    <p>&nbsp;</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-link aem-GridColumn aem-GridColumn--default--12">
+                                                        <a class="dmpro-v2 btn btn-primary btn-with-icon  text-secondary-color   "
+                                                            href="https://www.abbviepro.com/de/de/kontakt-und-service.html"
+                                                            onclick="pushToDatalayer('disable', '', '', '', '')"
+                                                            target="_self" title="Kontaktieren Sie uns" role="button"
+                                                            style=";;" data-type="internalLink" data-overlay="false">
+                                                            Kontaktieren Sie uns
+                                                            <span class="btn--icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="cmp-teaser section aem-GridColumn aem-GridColumn--default--12 h-100">
+                                        <div class="teaser__inner dmpro-v2 card " style=";">
+                                            <div class="teaser__image">
+                                                <div class="image-extension section ">
+                                                    <div class="image-container justify-content-center">
+                                                        <a target="_self" alt="Produktspezifischer Service"
+                                                            class="w-100" data-overlay="false">
+                                                            <div class="d-block device-image-container"
+                                                                data-img-width="486" data-img-height="220">
+                                                                <img class="img-fluid d-block  no-bgap lazyloaded"
+                                                                    src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_12163/par3-333333col/teaser_copy_copy_cop/bg-image/item_1.coreimg.jpg/1647420443643-produktspezifischer-service-frau-apotheke-teaser-486x220px.jpg/1647420443643-produktspezifischer-service-frau-apotheke-teaser-486x220px.jpg"
+                                                                    alt="Produktspezifischer Service"
+                                                                    title="Produktspezifischer Service"
+                                                                    fetchpriority="low"
+                                                                    data-src="https://www.abbviepro.com/content/abbvie-pro/de/de/jcr:content/body/column_control_12163/par3-333333col/teaser_copy_copy_cop/bg-image/item_1.coreimg.jpg/1647420443643-produktspezifischer-service-frau-apotheke-teaser-486x220px.jpg/1647420443643-produktspezifischer-service-frau-apotheke-teaser-486x220px.jpg">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                            <div class=" device-image-container">
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="teaser__content">
+                                                <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <h3>Produktspezifischer Service&nbsp; &nbsp; &nbsp;
+                                                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                                                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+                                                        <div class="headline-text-component" data-v-app="">
+                                                            <div>
+                                                                <div class="cmp-text dmpro-v2">
+                                                                    <p>Entdecken Sie unsere individuellen
+                                                                        Kontaktmöglichkeiten und Serviceleistungen rund
+                                                                        um die Behandlung von Patienten<br>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button-link aem-GridColumn aem-GridColumn--default--12">
+                                                        <a class="dmpro-v2 btn btn-primary btn-with-icon  text-white btn--locked  "
+                                                            href="https://www.abbviepro.com/de/de/kontakt-und-service/produktspezifischer-service.html"
+                                                            onclick="pushToDatalayer('disable', '', '', '', '')"
+                                                            target="_self" title="Jetzt registrieren  / anmelden"
+                                                            role="button" style=";;" data-type="internalLink"
+                                                            data-overlay="false">
+                                                            <span class="btn--locked--icon"></span>
+                                                            Jetzt registrieren / anmelden
+                                                            <span class="btn--icon"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-primary">
+        <p class="text-center m-0 py-2 text-white">Footer</p>
+    </footer>
+
+
+</body>
+
+</html>

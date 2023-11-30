@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Selector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://www.abbviepro.com/etc.clientlibs/abbvie-pro/clientlibs/publish-header.min.css" />
+   
+    <style>
+        body {
+           padding-bottom: 30px;
+        }
+
+        .container {
+            width: 100%;
+
+        }
+
+        .column-selector {
+            margin-bottom: 20px;
+        }
+
+        .column-option {
+            margin: 0 10px 10px 0;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        .container {
+            background: #fff;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            min-width: 350px;
+            padding: 5px 15px;
+        }
+
+        div#childColumns {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .child-wrap {
+            width: 100%;
+            padding: 5px 0;
+            background: rgb(213, 212, 212);
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 95%;
+        }
+
+        .child-wrap:empty {
+            display: none;
+        }
+
+        .error-column select {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"><a href="index.html" class="btn-link">Back 2</a></div>
+            <div class="col-4">
+                
+                <h2>Existing column control options</h2>
+                <ul>
+                    <li>Column options</li>
+                    <li><input type="checkbox"> Full Width?</li>
+                    <li><input type="checkbox"> No Inner Spacing?</li>
+                    <li><input type="checkbox"> Reverse on Mobile?</li>
+                    <li><input type="checkbox"> Keep Column Control on Mobile</li>
+                    <li><input type="checkbox"> Keep Column Control on Desktop Only</li>
+                    <li><input type="checkbox"> Set Shadow</li>
+                    <li><input type="checkbox"> Set Rounded</li>
+                    <li><input type="checkbox"> Vertically Align Item Center?</li>
+                    <li>Minimum Height <br>
+                        <input type="text">
+                    </li>
+                    <li>
+                        Background Configurations
+                    </li>
+                    <li>
+                        ID<br>
+                        <input type="text">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                
+                <h2 style="margin-top: 0; border-bottom: 1px solid rgb(241, 241, 241); padding-bottom: 10px;">Restructure Column
+                    control</h2>
+                <label for="parentColumn" class="column-selector">Select Parent Column:</label>
+                <select id="parentColumn" class="column-selector">
+                    <option value="1">1 Column</option>
+                    <option value="2">2 Column</option>
+                    <option value="3">3 Column</option>
+                    <option value="4">4 Column</option>
+                    <option value="5">5 Column</option>
+                    <option value="6">6 Column</option>
+                    <option value="7">7 Column</option>
+                    <option value="8">8 Column</option>
+                    <option value="9">9 Column</option>
+                    <option value="10">10 Column</option>
+                    <option value="11">11 Column</option>
+                    <option value="12">12 Column</option>
+                </select>
+                <div class="child-wrap">
+                    <p style="text-align: left; margin-top: 0;"><sup>⌄</sup> Column configuration <small>( Ensure that the total
+                            width of all columns equals 100%. )</small></p>
+                    <div id="childColumns" class="column-options"></div>
+                </div>
+        
+        
+                <br>
+                <label>
+                    <input type="checkbox" />
+                    No inner specing?
+                </label>
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                    Keep Column Control on Mobile
+                </label>
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                    Keep Column Control on Desktop Only
+                </label>
+        
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                    Vertically Align Item Center?
+                </label>
+        
+                <br> <br>
+                <label>
+                    <input type="checkbox" />
+                    Reverse on Mobile
+                </label>
+        
+        
+                <br><br>
+                <label for="minheight">Minimum Height</label>
+                <input id="minheight" style="height: 30px; padding: 0 14px; width: 95%;" type="number" />
+        
+        
+                <!-- <button onclick="validateConfig()">Validate Config</button> -->
+
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+    <script>
+        const parentColumnSelect = document.getElementById('parentColumn');
+        const childColumnsContainer = document.getElementById('childColumns');
+
+        parentColumnSelect.addEventListener('change', updateChildColumns);
+        updateChildColumns();
+
+        function updateChildColumns() {
+            const parentColumnValue = parseInt(parentColumnSelect.value) || 1;
+            childColumnsContainer.innerHTML = '';
+
+            for (let i = 1; i <= parentColumnValue; i++) {
+                const columnOption = document.createElement('div');
+                columnOption.classList.add('column-option');
+                columnOption.textContent = `Column: ${i}`;
+
+                const columnDropdown = document.createElement('select');
+                columnDropdown.classList.add('column-dropdown');
+                for (let j = 1; j <= 12; j++) {
+                    const option = document.createElement('option');
+                    option.value = j;
+                    option.text = `${Math.round(j * 8.33)}%`;
+                    columnDropdown.add(option);
+                }
+
+                // Add onblur event to validate when focus is moved away
+                columnDropdown.addEventListener('blur', validateConfig);
+                columnDropdown.addEventListener('change', validateConfig);
+                columnDropdown.addEventListener('onload', validateConfig);
+
+
+                columnOption.appendChild(columnDropdown);
+                childColumnsContainer.appendChild(columnOption);
+            }
+        }
+
+
+        function validateConfig() {
+            const selectedValues = Array.from(document.querySelectorAll('.column-dropdown')).map(dropdown => parseInt(dropdown.value));
+            const totalColumns = selectedValues.reduce((acc, val) => acc + val, 0);
+
+            if (totalColumns !== 12) {
+                childColumnsContainer.classList.add('error-column');
+                console.log('Invalid config. Please set a total maximum of 12 columns for the child columns.');
+            } else {
+                childColumnsContainer.classList.remove('error-column');
+                console.log('Config is valid!');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

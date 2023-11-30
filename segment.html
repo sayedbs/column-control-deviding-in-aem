@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://www.abbviepro.com/etc.clientlibs/abbvie-pro/clientlibs/publish-header.min.css" />
+  <style>
+    /* segment component start */
+    .segment {
+      width: 100%;
+    }
+
+    .segment_wrapper {
+      background-repeat: no-repeat;
+    }
+
+    .segment_container {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    .segment_container:not(.p-0) .container {
+      padding: 0;
+    }
+
+    .segment_container--center {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 576px) {
+      .segment_container--center {
+        max-width: 540px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .segment_container--center {
+        max-width: 720px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .segment_container--center {
+        max-width: 960px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .segment_container--center {
+        max-width: 1140px;
+      }
+    }
+
+    [class*="col"] {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      box-shadow: inset 0 0 0 2px rgb(223, 219, 219);
+    }
+
+    /* segment component start */
+  </style>
+</head>
+
+<body>
+  <br><a href="index.html" class="text-danger">Back</a> <br>
+
+  <h1>Segment Component test</h1>
+  <div class="border p-2 mb-3 m-3">
+    <h3>Full Configurations</h3>
+    <ul>
+      <li> Layout fluid/center</li>
+      <li> Background [primary, secondary, custom] custom: image,hex color,gradient, video</li>
+      <li>Gradient/video/color only container or fluid</li>
+      <li> <input type="checkbox"> Layout width/space </li>
+      <li> Container Id <br>
+        <input type="text" >
+      </li>
+    </ul>
+
+  </div>
+
+  <h2 class="bg-light">Example: 1</h2>
+  <div class="segment">
+    <div class="segment_wrapper">
+      <div class="segment_container segment_container--center">
+        <h2>Segment component center with default configurations</h2>
+        <p>Used for option center ```segment_container--center```</p>
+        <p>Content 2</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="bg-light">Example: 2</h2>
+  <div class="segment">
+    <div class="segment_wrapper">
+      <div class="segment_container">
+        <h2>Segment component center with fluid content</h2>
+        <p>content 1</p>
+        <p>content 2</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="bg-light">Example 3</h2>
+  <div class="segment">
+    <div class="segment_wrapper"
+      style="background: #292929 url(https://png.pngtree.com/background/20210710/original/pngtree-twisted-lines-black-banner-background-picture-image_1063944.jpg) no-repeat 0 0 /cover;">
+      <div class="segment_container"> <!-- segment_container--center -->
+
+        <!-- headline text component -->
+        <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+          <div class="headline-text-component" data-v-app="">
+            <div class="text-white">
+              <div class="cmp-text dmpro-v2">
+                <br>
+                <br>
+                <h2 class="text-white">Fluid Background with fluid container</h2>
+                <ul>
+                  <li>Layout container ( default/fluid )</li>
+                  <li>Background ( image/color/gradient )</li>
+                  <li>Background option ( default / fluid )</li>
+                  <li>Layout spacing ( default )</li>
+                  <li>Container ID ( default )</li>
+                </ul>
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <h2 class="bg-light">Example: 4</h2>
+  <div class="segment">
+    <div class="segment_wrapper"
+      style="background: gray url(https://png.pngtree.com/background/20210712/original/pngtree-green-premium-banner-picture-image_1178923.jpg) no-repeat center center /cover ;">
+      <div class="segment_container segment_container--center"> <!-- segment_container--center -->
+
+        <!-- headline text component -->
+        
+        <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+          <div class="headline-text-component" data-v-app="">
+            <div class="text-white">
+              <div class="cmp-text dmpro-v2">
+                <br>
+                <br>
+                <h2 class="text-white">Fluid backgorund with center content</h2>
+                <ul>
+                  <li>Layout container ( center )</li>
+                  <li>Background ( image/color/gradient )</li>
+                  <li>Background option ( container )</li>
+                  <li>Layout spacing ( default )</li>
+                  <li>Container ID ( default )</li>
+                </ul>
+                <br>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <h2 class="bg-light">Example: 5</h2>
+  <div class="segment">
+    <div class="segment_wrapper">
+      <div class="segment_container segment_container--center" style="background: #292929 url(https://static.vecteezy.com/system/resources/previews/005/390/828/original/abstract-black-red-line-light-banner-slash-on-grey-design-modern-futuristic-background-vector.jpg) no-repeat 0 0 /cover;"> <!-- segment_container--center -->
+
+        <!-- headline text component -->
+        
+        <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
+          <div class="headline-text-component" data-v-app="">
+            <div class="text-white">
+              <div class="cmp-text dmpro-v2">
+                <br>
+                <br>
+                <br>
+                <h2>Center backgorund</h2>
+                <ul>
+                  <li>Layout container ( center )</li>
+                  <li>Background ( image/color/gradient )</li>
+                  <li>Background option ( container )</li>
+                  <li>Layout spacing ( default )</li>
+                  <li>Container ID ( default )</li>
+                </ul>
+                <br>
+                <br>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
