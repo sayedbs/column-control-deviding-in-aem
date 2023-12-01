@@ -12,7 +12,7 @@
         rel="stylesheet" />
 
     <link rel="stylesheet" href="https://www.abbviepro.com/etc.clientlibs/abbvie-pro/clientlibs/publish-header.min.css" />
-   
+
     <style>
         body {
            padding-bottom: 30px;
@@ -72,10 +72,86 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2"><a href="index.html" class="btn-link">Back 2</a></div>
-            <div class="col-4">
-                
-                <h2>Existing column control options</h2>
+            <div class="col-12"><a href="index.html" class="btn-link">Back 2</a></div>
+            <div class="col-6" style="background-color: #eee;">
+
+                <h2 style="margin-top: 0; border-bottom: 1px solid rgb(241, 241, 241); padding-bottom: 10px;">Current  Column
+                    control</h2>
+                <label for="current" class="column-selector">Select Column:</label>
+                <select id="current" class="column-selector">
+                    <option value="100col">100% (default)</option>
+<option value="8317col">83% + 17%</option>
+<option value="1783col">17% + 83%</option>
+<option value="7525col">75% + 25%</option>
+<option value="2575col">25% + 75%</option>
+<option value="5050col">50% + 50%</option>
+<option value="6633col">66% + 33%</option>
+<option value="3366col">33% + 66%</option>
+<option value="176617col">17% + 66% + 17%</option>
+<option value="333333col" selected="">33% + 33% + 33%</option>
+<option value="255025col">25% + 50% + 25%</option>
+<option value="25252525col">25% + 25% + 25% +25%</option>
+                </select>
+                <br>
+                <label>
+                    <input type="checkbox" />
+                    Full Width?
+                </label>
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                    No inner specing?
+                </label>
+                <br> <br>
+                <label>
+                    <input type="checkbox" />
+                    Reverse on Mobile?
+                </label>
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                    Keep Column Control on Mobile
+                </label>
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                    Keep Column Control on Desktop Only
+                </label>
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                   Set Shadow
+                </label>
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                    Set ROunded
+                </label>
+                <br><br>
+                <label>
+                    <input type="checkbox" />
+                    Vertically Align Item Center?
+                </label>
+                <br><br>
+                <label for="minheight">Minimum Height</label>
+                <input id="minheight" style="height: 30px; padding: 0 14px; width: 95%;" type="number" />
+                <br><br>
+                <label for="minheight">Background Options</label>
+                <select>
+                    <option value="none" selected="">None</option>
+                    <option value="image">Background Image</option>
+                    <option value="video">Background Video</option>
+                    <option value="color">Background Color</option>
+                </select>
+                <br><br>
+                <label for="minheight">ID</label><br>
+                <input id="minheight" style="height: 30px; padding: 0 14px; width: 95%;" type="text" />
+                <br><br><!-- <button onclick="validateConfig()">Validate Config</button> -->
+
+            </div>
+            <!-- <div class="col-6" style="background-color: #999;">
+
+                <h2>Current column control options</h2>
                 <ul>
                     <li>Column options</li>
                     <li><input type="checkbox"> Full Width?</li>
@@ -97,12 +173,12 @@
                         <input type="text">
                     </li>
                 </ul>
-            </div>
-            <div class="col-4">
-                
+            </div> -->
+            <div class="col-6">
+
                 <h2 style="margin-top: 0; border-bottom: 1px solid rgb(241, 241, 241); padding-bottom: 10px;">Restructure Column
                     control</h2>
-                <label for="parentColumn" class="column-selector">Select Parent Column:</label>
+                <label for="parentColumn" class="column-selector">Select Column:</label>
                 <select id="parentColumn" class="column-selector">
                     <option value="1">1 Column</option>
                     <option value="2">2 Column</option>
@@ -118,12 +194,12 @@
                     <option value="12">12 Column</option>
                 </select>
                 <div class="child-wrap">
-                    <p style="text-align: left; margin-top: 0;"><sup>⌄</sup> Column configuration <small>( Ensure that the total
-                            width of all columns equals 100%. )</small></p>
+                    <p style="text-align: left; margin-top: 0; color: #397626;font-weight: bold;"><sup>⌄</sup> Column configuration ( Ensure that the total
+                            width of all columns equals 100%. )</p>
                     <div id="childColumns" class="column-options"></div>
                 </div>
-        
-        
+
+
                 <br>
                 <label>
                     <input type="checkbox" />
@@ -139,29 +215,28 @@
                     <input type="checkbox" />
                     Keep Column Control on Desktop Only
                 </label>
-        
+
                 <br><br>
                 <label>
                     <input type="checkbox" />
                     Vertically Align Item Center?
                 </label>
-        
+
                 <br> <br>
                 <label>
                     <input type="checkbox" />
                     Reverse on Mobile
                 </label>
-        
-        
+
+
                 <br><br>
                 <label for="minheight">Minimum Height</label>
                 <input id="minheight" style="height: 30px; padding: 0 14px; width: 95%;" type="number" />
-        
-        
+
+
                 <!-- <button onclick="validateConfig()">Validate Config</button> -->
 
             </div>
-            <div class="col-2"></div>
         </div>
     </div>
 
