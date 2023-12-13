@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home: Column control demo</title>
@@ -9,101 +8,140 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://www.abbviepro.com/etc.clientlibs/abbvie-pro/clientlibs/publish-header.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://www.abbviepro.com/etc.clientlibs/abbvie-pro/clientlibs/publish-header.min.css"
+    />
     <style>
-        /* box component start */
-        .box {
-            width: 100%;
-        }
+      /* box component start */
+      .box {
+        width: 100%;
+      }
 
-        .box__content {
-            padding: 15px;
-            margin-bottom: 15px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-        }
+      .box__content {
+        padding: 15px;
+        margin-bottom: 15px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
 
-        .box__content.box--padding-0 {
-            padding: 0;
-        }
-        .box__content.box--margin-0 {
-            margin: 0;
-        }
-        .box__content.box--rounded {
-            border-radius: 10px;
-        }
+      .box__content.box--padding-0 {
+        padding: 0;
+      }
+      .box__content.box--margin-0 {
+        margin: 0;
+      }
+      .box__content.box--rounded {
+        border-radius: 10px;
+      }
 
-        .box__content.box--shadaw {
-            box-shadow: 0 0 15px 10px rgb(0 0 0 / 27%);
-        }
+      .box__content.box--shadaw {
+        box-shadow: 0 0 15px 10px rgb(0 0 0 / 27%);
+      }
 
-        .box__content.box--primary {
-            background: #061d49;
-            color: #fff;
-        }
-        .box__content.box--secondary {
-            background: #0082ba;
-            color: #fff;
-        }
+      .box__content.box--primary {
+        background: #061d49;
+        color: #fff;
+      }
+      .box__content.box--secondary {
+        background: #0082ba;
+        color: #fff;
+      }
 
-        /* box component end */
+      /* box component end */
     </style>
-</head>
+  </head>
 
-
-<body data-site-id="dmpro-400">
-
+  <body data-site-id="dmpro-400">
     <header class="bg-primary">
-        <h1 class="text-center m-0 py-2 text-white">Header</h1>
+      <h1 class="text-center m-0 py-2 text-white">Header</h1>
     </header>
 
-    <br><a href="index.html">Back</a> <br>
+    <br /><a href="index.html">Back</a> <br />
 
     <div class="separator">
-        <hr class="cmp-separator__horizontal-rule border-0 size-1 my-5" />
+      <hr class="cmp-separator__horizontal-rule border-0 size-1 my-5" />
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-5">
-                <div class=" mb-3 m-3 bg-light d-block p-5">
-                    <h3 class="pb-3">Box Option</h3>
-                    <label for="minheight">Background Color</label><br>
-                    <input value="#FDFDFD" type="text">
-                    <!-- <select>
+      <div class="row">
+        <div class="col-4">
+          <div class="mb-3 m-3 bg-light d-block p-5">
+            <h3 class="pb-3">Box Option</h3>
+            <label for="minheight">Background Color</label><br />
+            <input value="#FDFDFD" type="text" />
+            <!-- <select>
                         <option value="none" selected="">None</option>
                         <option value="image">Background Image</option>
                         <option value="video">Background Video</option>
                         <option value="color">Background Color</option>
                         <option value="Custom">Custom</option>
                     </select> -->
-                    <br><br>
-                    <label>
-                      <input type="checkbox" />
-                      Set Rounded?
-                  </label>
-                  <br><br>
-                  <label>
-                    <input type="checkbox" />
-                    Set Shadow?
-                </label>
-                <br><br>
-                <label>
-                  <input type="checkbox" />
-                  Inner Space
-              </label>
-              <br><br>
-                <label>
-                  <input type="checkbox" />
-                  Inner Space
-              </label>
+            <br /><br />
+            <label>
+              <input type="checkbox" />
+              Set Rounded?
+            </label>
+            <br /><br />
+            <label>
+              <input type="checkbox" />
+              Set Shadow?
+            </label>
+            <br /><br />
+            <h4>Around Space</h4>
+            <label>Space on Top</label><br />
+            <select style="width: 170px">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>Custom</option>
+            </select>
 
-                </div>
-                <!-- <div class="border p-2 mb-3">
+            <br /><br />
+            <label>Space on Right</label><br />
+            <select style="width: 170px">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>Custom</option>
+            </select>
+            <br /><br />
+            <label>Space on Bottom</label><br />
+            <select style="width: 170px">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>Custom</option>
+            </select>
+            <br /><br />
+            <label>Space on Left</label><br />
+            <select style="width: 170px">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>Custom</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12">
+          <!-- <div class="border p-2 mb-3">
                     <h2>Full configuration for Box</h2>
                     <ul>
                         <li>Background /color, gradient color , image</li>
@@ -114,153 +152,226 @@
                     </ul>
                 </div> -->
 
-                <h2>Example: 1</h2>
-                <div class="box">
-                    <div class="box__content">
-                        <!-- aem component  -->
-                        <div class="headline-text">
-                            <h2>Box : default ( zero configuration )</h2>
-                            <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                        </div>
-                        <!-- aem component  -->
-                    </div>
-                </div>
-
-                <h2>Example: 2</h2>
-                <div class="box">
-                    <div class="box__content box--padding-0">
-                        <!-- aem component  -->
-                        <div class="headline-text">
-                            <h2>Box : remove inner gap</h2>
-                            <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                        </div>
-                        <!-- aem component  -->
-                    </div>
-                </div>
-
-                <h2>Example: 3</h2>
-                <div class="box">
-                    <div class="box__content box--padding-0 box--margin-0">
-                        <!-- aem component  -->
-                        <div class="headline-text">
-                            <h2>Box : remove inner gap and outer gap</h2>
-                            <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                        </div>
-                        <!-- aem component  -->
-                    </div>
-                </div>
-
-
-                <h2>Example: 4</h2>
-                <div class="box">
-                    <div class="box__content box--primary ">
-                        <!-- aem component  -->
-                        <div class="headline-text">
-                            <h2>Box : remove inner gap and outer gap</h2>
-                            <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                        </div>
-                        <!-- aem component  -->
-                    </div>
-                </div>
-
-                <h2>Example: 5</h2>
-                <div class="box">
-                    <div class="box__content box--secondary ">
-                        <!-- aem component  -->
-                        <div class="headline-text">
-                            <h2>Box : secondary</h2>
-                            <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                        </div>
-                        <!-- aem component  -->
-                    </div>
-                </div>
-
-                <h2>Example: 6</h2>
-                <div class="box">
-                    <div class="box__content box--primary box--rounded">
-                        <!-- aem component  -->
-                        <div class="headline-text">
-                            <h2>Box : primary, rounded </h2>
-                            <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                        </div>
-                        <!-- aem component  -->
-                    </div>
-                </div>
-
-                <h2>Example: 7</h2>
-                <div class="box">
-                    <div class="box__content box--primary box--rounded box--padding-0">
-                        <h2>Box : primary, rounded, remove-inner-gap</h2>
-                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D" width="80" height="90">
-                    </div>
-                </div>
-
-                <h2>Example: 8</h2>
-                <div class="box">
-                    <div class="box__content box--rounded box--shadaw box--margin-0">
-                        <!-- aem component  -->
-                        <div class="headline-text">
-                            <h2>Box : rounded, shadow, remove-outer gap</h2>
-                            <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                        </div>
-                        <!-- aem component  -->
-                    </div>
-                </div>
-
-                <h2>Example: 9</h2>
-                <div class="box">
-                    <div class="box__content box--rounded box--custom-bg box--shadaw" style="background: #a3a3a3 url(https://i.stack.imgur.com/l0JyZ.jpg) repeat">
-                        <!-- aem component  -->
-                        <div class="headline-text">
-                            <h2>Box : rounded, shadow</h2>
-                            <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                        </div>
-                        <!-- aem component  -->
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6">
-                        <h2>Example: 10</h2>
-                        <div class="box">
-                            <div class="box__content box--rounded box--custom-bg box--shadaw">
-                                <!-- aem component  -->
-                                <div class="headline-text">
-                                    <h2>Box: rounded, shadow </h2>
-                                    <p><strong> with custom backgorund</strong> voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                                </div>
-                                <!-- aem component  -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <h2> &nbsp;</h2>
-                        <div class="box">
-                            <div class="box__content box--rounded box--primary box--shadaw" >
-                                <!-- aem component  -->
-                                <div class="headline-text">
-                                    <h2>Box : rounded, shadow, primary</h2>
-                                    <p><strong>Fluid Box</strong> magna commodo ullamco dolore voluptate tempor laboris consequat anim dolore mollit et laborum ullamco. Ullamco nulla tempor ea sint velit occaecat sint sunt veniam. Et esse consectetur do laboris proident deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat mollit enim amet Lorem.</p>
-                                </div>
-                                <!-- aem component  -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+          <h2>Example: 1</h2>
+          <div class="box">
+            <div class="box__content">
+              <!-- aem component  -->
+              <div class="headline-text">
+                <h2>Box : default ( zero configuration )</h2>
+                <p>
+                  <strong>Fluid Box</strong> magna commodo ullamco dolore
+                  voluptate tempor laboris consequat anim dolore mollit et
+                  laborum ullamco. Ullamco nulla tempor ea sint velit occaecat
+                  sint sunt veniam. Et esse consectetur do laboris proident
+                  deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                  mollit enim amet Lorem.
+                </p>
+              </div>
+              <!-- aem component  -->
             </div>
+          </div>
+
+          <h2>Example: 2</h2>
+          <div class="box">
+            <div class="box__content box--padding-0">
+              <!-- aem component  -->
+              <div class="headline-text">
+                <h2>Box : remove inner gap</h2>
+                <p>
+                  <strong>Fluid Box</strong> magna commodo ullamco dolore
+                  voluptate tempor laboris consequat anim dolore mollit et
+                  laborum ullamco. Ullamco nulla tempor ea sint velit occaecat
+                  sint sunt veniam. Et esse consectetur do laboris proident
+                  deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                  mollit enim amet Lorem.
+                </p>
+              </div>
+              <!-- aem component  -->
+            </div>
+          </div>
+
+          <h2>Example: 3</h2>
+          <div class="box">
+            <div class="box__content box--padding-0 box--margin-0">
+              <!-- aem component  -->
+              <div class="headline-text">
+                <h2>Box : remove inner gap and outer gap</h2>
+                <p>
+                  <strong>Fluid Box</strong> magna commodo ullamco dolore
+                  voluptate tempor laboris consequat anim dolore mollit et
+                  laborum ullamco. Ullamco nulla tempor ea sint velit occaecat
+                  sint sunt veniam. Et esse consectetur do laboris proident
+                  deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                  mollit enim amet Lorem.
+                </p>
+              </div>
+              <!-- aem component  -->
+            </div>
+          </div>
+
+          <h2>Example: 4</h2>
+          <div class="box">
+            <div class="box__content box--primary">
+              <!-- aem component  -->
+              <div class="headline-text">
+                <h2>Box : remove inner gap and outer gap</h2>
+                <p>
+                  <strong>Fluid Box</strong> magna commodo ullamco dolore
+                  voluptate tempor laboris consequat anim dolore mollit et
+                  laborum ullamco. Ullamco nulla tempor ea sint velit occaecat
+                  sint sunt veniam. Et esse consectetur do laboris proident
+                  deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                  mollit enim amet Lorem.
+                </p>
+              </div>
+              <!-- aem component  -->
+            </div>
+          </div>
+
+          <h2>Example: 5</h2>
+          <div class="box">
+            <div class="box__content box--secondary">
+              <!-- aem component  -->
+              <div class="headline-text">
+                <h2>Box : secondary</h2>
+                <p>
+                  <strong>Fluid Box</strong> magna commodo ullamco dolore
+                  voluptate tempor laboris consequat anim dolore mollit et
+                  laborum ullamco. Ullamco nulla tempor ea sint velit occaecat
+                  sint sunt veniam. Et esse consectetur do laboris proident
+                  deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                  mollit enim amet Lorem.
+                </p>
+              </div>
+              <!-- aem component  -->
+            </div>
+          </div>
+
+          <h2>Example: 6</h2>
+          <div class="box">
+            <div class="box__content box--primary box--rounded">
+              <!-- aem component  -->
+              <div class="headline-text">
+                <h2>Box : primary, rounded</h2>
+                <p>
+                  <strong>Fluid Box</strong> magna commodo ullamco dolore
+                  voluptate tempor laboris consequat anim dolore mollit et
+                  laborum ullamco. Ullamco nulla tempor ea sint velit occaecat
+                  sint sunt veniam. Et esse consectetur do laboris proident
+                  deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                  mollit enim amet Lorem.
+                </p>
+              </div>
+              <!-- aem component  -->
+            </div>
+          </div>
+
+          <h2>Example: 7</h2>
+          <div class="box">
+            <div class="box__content box--primary box--rounded box--padding-0">
+              <h2>Box : primary, rounded, remove-inner-gap</h2>
+              <img
+                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+                width="80"
+                height="90"
+              />
+            </div>
+          </div>
+
+          <h2>Example: 8</h2>
+          <div class="box">
+            <div class="box__content box--rounded box--shadaw box--margin-0">
+              <!-- aem component  -->
+              <div class="headline-text">
+                <h2>Box : rounded, shadow, remove-outer gap</h2>
+                <p>
+                  <strong>Fluid Box</strong> magna commodo ullamco dolore
+                  voluptate tempor laboris consequat anim dolore mollit et
+                  laborum ullamco. Ullamco nulla tempor ea sint velit occaecat
+                  sint sunt veniam. Et esse consectetur do laboris proident
+                  deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                  mollit enim amet Lorem.
+                </p>
+              </div>
+              <!-- aem component  -->
+            </div>
+          </div>
+
+          <h2>Example: 9</h2>
+          <div class="box">
+            <div
+              class="box__content box--rounded box--custom-bg box--shadaw"
+              style="
+                background: #a3a3a3 url(https://i.stack.imgur.com/l0JyZ.jpg)
+                  repeat;
+              "
+            >
+              <!-- aem component  -->
+              <div class="headline-text">
+                <h2>Box : rounded, shadow</h2>
+                <p>
+                  <strong>Fluid Box</strong> magna commodo ullamco dolore
+                  voluptate tempor laboris consequat anim dolore mollit et
+                  laborum ullamco. Ullamco nulla tempor ea sint velit occaecat
+                  sint sunt veniam. Et esse consectetur do laboris proident
+                  deserunt. Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                  mollit enim amet Lorem.
+                </p>
+              </div>
+              <!-- aem component  -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-6">
+              <h2>Example: 10</h2>
+              <div class="box">
+                <div
+                  class="box__content box--rounded box--custom-bg box--shadaw"
+                >
+                  <!-- aem component  -->
+                  <div class="headline-text">
+                    <h2>Box: rounded, shadow</h2>
+                    <p>
+                      <strong> with custom backgorund</strong> voluptate tempor
+                      laboris consequat anim dolore mollit et laborum ullamco.
+                      Ullamco nulla tempor ea sint velit occaecat sint sunt
+                      veniam. Et esse consectetur do laboris proident deserunt.
+                      Minim ex qui ut est aliquip veniam eiusmod in fugiat
+                      mollit enim amet Lorem.
+                    </p>
+                  </div>
+                  <!-- aem component  -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <h2>&nbsp;</h2>
+              <div class="box">
+                <div class="box__content box--rounded box--primary box--shadaw">
+                  <!-- aem component  -->
+                  <div class="headline-text">
+                    <h2>Box : rounded, shadow, primary</h2>
+                    <p>
+                      <strong>Fluid Box</strong> magna commodo ullamco dolore
+                      voluptate tempor laboris consequat anim dolore mollit et
+                      laborum ullamco. Ullamco nulla tempor ea sint velit
+                      occaecat sint sunt veniam. Et esse consectetur do laboris
+                      proident deserunt. Minim ex qui ut est aliquip veniam
+                      eiusmod in fugiat mollit enim amet Lorem.
+                    </p>
+                  </div>
+                  <!-- aem component  -->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-
-
-
-
     <footer class="bg-primary">
-        <p class="text-center m-0 py-2 text-white">Footer</p>
+      <p class="text-center m-0 py-2 text-white">Footer</p>
     </footer>
-
-
-</body>
-
+  </body>
 </html>
