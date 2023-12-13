@@ -74,8 +74,42 @@
 <body>
   <br><a href="index.html" class="text-danger">Back</a> <br>
 
-  <h1>Segment Component test</h1>
-  <div class="border p-2 mb-3 m-3">
+  <div class="mb-3 m-3 bg-light d-block p-5" style="width: 500px;">
+    <h3 class="pb-3">Content Container Component Options</h3>
+    <label for="minheight">Container ID</label><br />
+    <input value="" type="text" />
+    <!-- <select>
+                <option value="none" selected="">None</option>
+                <option value="image">Background Image</option>
+                <option value="video">Background Video</option>
+                <option value="color">Background Color</option>
+                <option value="Custom">Custom</option>
+            </select> -->
+    <br /><br />
+    <label>
+      <input type="checkbox" />
+      Layout fluid
+    </label>
+    <br /><br />
+    <label>
+      <input type="checkbox" />
+      Remove inner space
+    </label>
+    <br /><br />
+    <label>Background Options</label><br />
+    <select style="width: 170px">
+      <option>primary</option>
+      <option>Secondary</option>
+      <option>Image</option>
+      <option>Custom</option>
+    </select>
+    <br /><br />
+    <label>
+      <input type="checkbox" />
+     Background on COntainer only?
+    </label>
+  </div>
+  <!-- <div class="border p-2 mb-3 m-3">
     <h3>Full Configurations</h3>
     <ul>
       <li> Layout fluid/center</li>
@@ -87,13 +121,13 @@
       </li>
     </ul>
 
-  </div>
+  </div> -->
 
   <h2 class="bg-light">Example: 1</h2>
   <div class="segment">
     <div class="segment_wrapper">
       <div class="segment_container segment_container--center">
-        <h2>Segment component center with default configurations</h2>
+        <h2>Content component center with default configurations</h2>
         <p>Used for option center ```segment_container--center```</p>
         <p>Content 2</p>
       </div>
@@ -104,7 +138,7 @@
   <div class="segment">
     <div class="segment_wrapper">
       <div class="segment_container">
-        <h2>Segment component center with fluid content</h2>
+        <h2>Content component center with fluid content</h2>
         <p>content 1</p>
         <p>content 2</p>
       </div>
@@ -149,7 +183,7 @@
       <div class="segment_container segment_container--center"> <!-- segment_container--center -->
 
         <!-- headline text component -->
-        
+
         <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
           <div class="headline-text-component" data-v-app="">
             <div class="text-white">
@@ -181,7 +215,7 @@
       <div class="segment_container segment_container--center" style="background: #292929 url(https://static.vecteezy.com/system/resources/previews/005/390/828/original/abstract-black-red-line-light-banner-slash-on-grey-design-modern-futuristic-background-vector.jpg) no-repeat 0 0 /cover;"> <!-- segment_container--center -->
 
         <!-- headline text component -->
-        
+
         <div class="headline-text text aem-GridColumn aem-GridColumn--default--12">
           <div class="headline-text-component" data-v-app="">
             <div class="text-white">
@@ -199,7 +233,7 @@
                 </ul>
                 <br>
                 <br>
-                
+
               </div>
             </div>
           </div>
